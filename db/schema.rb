@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_07_02_012703) do
     t.string "title"
     t.text "body"
     t.integer "user_id"
+    t.float "rate", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
