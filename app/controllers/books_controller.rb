@@ -7,7 +7,11 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    if params[:option] == "A"
+      @books = Book.all.order(rate: :desc)
+    elsif params[:option] == "B"
+      @books = Book.all.order(created_at: :desc)
+    end
     @book = Book.new
   end
 
