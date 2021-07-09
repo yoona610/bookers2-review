@@ -7,6 +7,10 @@
     <%= f.label :opinion %>
     <%= f.text_area :body, class: 'form-control book_body' %>
   </div>
+  <div id="category-form">
+    <%= f.label :category %>
+    <%= f.text_area :category, class: 'form-control' %>
+  </div>
   <div id="rating-form">
     <%= f.label :evaluation %>
     <%= f.hidden_field :rate, :value => 'score' %>

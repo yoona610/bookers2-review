@@ -4,6 +4,7 @@
       <th></th>
       <th>Title</th>
       <th>Opinion</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
         </td>
         <td><%= link_to book.title, book_path(book), class: "book_#{book.id}" %></td>
         <td><%= book.body %></td>
+        <td><%= link_to book.category, home_search_path(keyword: book.category) %></td>
         <td><div class="favorite-btn_<%= book.id %>"><%= render partial: "favorites/favorite-btn", locals: {book: book} %></div></td>
         <td>コメント数:<%= book.book_comments.count %></td>
         <td>
